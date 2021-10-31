@@ -155,7 +155,7 @@ class Character(Model):
     def get_stat_bonus(self, stat: Stat):
         return self.get_stat(stat) // 10
 
-    def _regen(self, current_attr, max_attr, rate_attr, rounds=None):
+    def _regen(self, current_attr, max_attr, rate_attr, rounds=None):  # TODO I was working on that
         current = self.__getattribute__(current_attr)
         rate = self.get_attribute(rate_attr)
         max_value = self.get_attribute(max_attr)
